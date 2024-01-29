@@ -9,31 +9,35 @@ import SwiftUI
 
 struct TodayWeatherView: View {
 	@Binding var isNight: Bool
-	var temperature: Int
+	var weather : Weather
 	
 	var body: some View {
-		VStack(spacing: 10){
+		VStack(spacing: 5){
+			Text("\(weather.weekDay)")
+				.font(.system(size: 58, weight: .medium))
+				.foregroundStyle(.white)
+			
 			Image(systemName: isNight ? "moon.stars.fill": "cloud.sun.fill")
 				.renderingMode(.original)
 				.resizable()
 				.aspectRatio(contentMode: .fit)
 				.frame(width: 180, height: 180)
 			
-			Text("\(temperature)°")
+			Text("\(weather.temperature)°")
 				.font(.system(size: 70, weight: .medium))
 				.foregroundStyle(.white)
 		}
-		.padding(.bottom, 40)
+		.padding(10)
 	}
 }
 
 #Preview {
 	Group{
 		HStack{
-			TodayWeatherView(isNight: .constant(false), temperature: 75)
+			TodayWeatherView(isNight: .constant(false), weather: Weather(weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.cloudSun.rawValue, temperature: 75))
 				.background(.black)
 			
-			TodayWeatherView(isNight: .constant(true), temperature: 75)
+			TodayWeatherView(isNight: .constant(true), weather: Weather(weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.cloudMoon.rawValue, temperature: 75))
 				.background(.black)
 		}
 	}

@@ -15,7 +15,7 @@ struct WeatherForecastBackgroundView: View {
 												isNight ? .gray : Color("lightBlue")]),
 					  startPoint: .topLeading,
 					  endPoint: .bottomTrailing)
-			.edgesIgnoringSafeArea(.all)
+			.edgesIgnoringSafeArea(.all) // fills up whole screen
 	}
 }
 

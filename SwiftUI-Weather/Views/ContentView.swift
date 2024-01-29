@@ -10,35 +10,30 @@ import SwiftUI
 struct ContentView: View {
 	@State private var isNight = false
 	
+	private var forecast =
+	[
+		Weather(weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.sunMax.rawValue, temperature: 74),
+		Weather(weekDay: WeekDay.tue.rawValue, weatherIcon: WeatherIcon.cloudSun.rawValue, temperature: 74),
+		Weather(weekDay: WeekDay.wed.rawValue, weatherIcon: WeatherIcon.wind.rawValue, temperature: 74),
+		Weather(weekDay: WeekDay.thu.rawValue, weatherIcon: WeatherIcon.cloudBolt.rawValue, temperature: 74),
+		Weather(weekDay: WeekDay.fri.rawValue, weatherIcon: WeatherIcon.cloudRain	.rawValue, temperature: 74),
+		Weather(weekDay: WeekDay.sat.rawValue, weatherIcon: WeatherIcon.cloudSnow.rawValue, temperature: 74),
+		Weather(weekDay: WeekDay.sun.rawValue, weatherIcon: WeatherIcon.snowflake.rawValue, temperature: 74)
+	]
+	
     var body: some View {
 		ZStack {
-			WeatherForecastBackgroundView(isNight: $isNight) // fills up whole screen
+			WeatherForecastBackgroundView(isNight: $isNight)
 			
 			VStack{
 				CityTextView(cityName: "Cupertino, CA")
 				
-				TodayWeatherView(isNight: $isNight, temperature: 76)
+				TodayWeatherView(isNight: $isNight, weather: forecast[0])
 				
-				HStack(spacing: 20){
-					WeatherDayView(dayOfWeek: "TUE",
-								  imageName: "cloud.sun.fill",
-								  temperature: 74)
-					
-					WeatherDayView(dayOfWeek: "WED",
-								  imageName: "sun.max.fill",
-								  temperature: 88)
-					
-					WeatherDayView(dayOfWeek: "THU",
-								  imageName: "wind.snow",
-								  temperature: 55)
-					
-					WeatherDayView(dayOfWeek: "FRI",
-								  imageName: "cloud.rain.fill",
-								  temperature: 60)
-					
-					WeatherDayView(dayOfWeek: "SAT",
-								  imageName: "snow",
-								  temperature: 25)
+				HStack(spacing: 10){
+					ForEach(forecast[1...], id: \.self){ weather in
+						WeatherDayView(weather: weather)
+					}
 				}
 				
 				Spacer()
