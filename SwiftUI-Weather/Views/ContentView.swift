@@ -12,14 +12,30 @@ struct ContentView: View {
 	
 	private var forecast =
 	[
-		Weather(weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.sunMax.rawValue, temperature: 74),
-		Weather(weekDay: WeekDay.tue.rawValue, weatherIcon: WeatherIcon.cloudSun.rawValue, temperature: 74),
-		Weather(weekDay: WeekDay.wed.rawValue, weatherIcon: WeatherIcon.wind.rawValue, temperature: 74),
-		Weather(weekDay: WeekDay.thu.rawValue, weatherIcon: WeatherIcon.cloudBolt.rawValue, temperature: 74),
-		Weather(weekDay: WeekDay.fri.rawValue, weatherIcon: WeatherIcon.cloudRain	.rawValue, temperature: 74),
-		Weather(weekDay: WeekDay.sat.rawValue, weatherIcon: WeatherIcon.cloudSnow.rawValue, temperature: 74),
-		Weather(weekDay: WeekDay.sun.rawValue, weatherIcon: WeatherIcon.snowflake.rawValue, temperature: 74)
+		Weather(weekDay: WeekDay.mon.rawValue,
+			   weatherIcon: WeatherIcon.sunMax.rawValue,
+			   temperature: 74),
+		Weather(weekDay: WeekDay.tue.rawValue,
+			   weatherIcon: WeatherIcon.cloudSun.rawValue,
+			   temperature: 74),
+		Weather(weekDay: WeekDay.wed.rawValue,
+			   weatherIcon: WeatherIcon.wind.rawValue,
+			   temperature: 74),
+		Weather(weekDay: WeekDay.thu.rawValue,
+			   weatherIcon: WeatherIcon.cloudBolt.rawValue,
+			   temperature: 74),
+		Weather(weekDay: WeekDay.fri.rawValue,
+			   weatherIcon: WeatherIcon.cloudRain.rawValue,
+		       temperature: 74),
+		Weather(weekDay: WeekDay.sat.rawValue,
+			   weatherIcon: WeatherIcon.cloudSnow.rawValue,
+			   temperature: 74),
+		Weather(weekDay: WeekDay.sun.rawValue,
+			   weatherIcon: WeatherIcon.snowflake.rawValue,
+			   temperature: 74)
 	]
+	
+	@State private var forecastByApi: [Weather] = []
 	
     var body: some View {
 		ZStack {
@@ -49,6 +65,11 @@ struct ContentView: View {
 				Spacer()
 			}
 		}
+//		.onAppear{
+//		   if(forecastByApi.count == 0){
+//			   forecastByApi = WeatherForecastService.getWeatherForecastAsync(latitude: 33.44, longitude: -94.04)
+//		   }
+//	   }
     }
 }
 

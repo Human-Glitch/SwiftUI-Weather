@@ -19,6 +19,8 @@
 		E76876342B67571300086F92 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76876332B67571300086F92 /* Weather.swift */; };
 		E76876372B6757EA00086F92 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76876362B6757EA00086F92 /* WeekDay.swift */; };
 		E76876392B67597700086F92 /* WeatherIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76876382B67597700086F92 /* WeatherIcon.swift */; };
+		E768763C2B6767EB00086F92 /* WeatherForecastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768763B2B6767EB00086F92 /* WeatherForecastService.swift */; };
+		E768763E2B676C8300086F92 /* OpenWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E768763D2B676C8300086F92 /* OpenWeatherResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E76876332B67571300086F92 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		E76876362B6757EA00086F92 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		E76876382B67597700086F92 /* WeatherIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherIcon.swift; sourceTree = "<group>"; };
+		E768763B2B6767EB00086F92 /* WeatherForecastService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecastService.swift; sourceTree = "<group>"; };
+		E768763D2B676C8300086F92 /* OpenWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		E76876122B671AF300086F92 /* SwiftUI-Weather */ = {
 			isa = PBXGroup;
 			children = (
+				E768763A2B6767C000086F92 /* Services */,
 				E76876352B6757CB00086F92 /* Constants */,
 				E768762F2B67566000086F92 /* Models */,
 				E768762E2B67554900086F92 /* Controls */,
@@ -112,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				E76876332B67571300086F92 /* Weather.swift */,
+				E768763D2B676C8300086F92 /* OpenWeatherResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -123,6 +129,14 @@
 				E76876382B67597700086F92 /* WeatherIcon.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		E768763A2B6767C000086F92 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E768763B2B6767EB00086F92 /* WeatherForecastService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +214,8 @@
 				E76876272B674E9500086F92 /* WeatherDayView.swift in Sources */,
 				E76876162B671AF300086F92 /* ContentView.swift in Sources */,
 				E768762D2B67547200086F92 /* TodayWeatherView.swift in Sources */,
+				E768763E2B676C8300086F92 /* OpenWeatherResponse.swift in Sources */,
+				E768763C2B6767EB00086F92 /* WeatherForecastService.swift in Sources */,
 				E76876392B67597700086F92 /* WeatherIcon.swift in Sources */,
 				E768762B2B67544300086F92 /* CityTextView.swift in Sources */,
 				E76876142B671AF300086F92 /* SwiftUI_WeatherApp.swift in Sources */,
