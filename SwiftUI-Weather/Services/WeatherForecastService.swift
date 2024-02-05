@@ -72,7 +72,13 @@ class WeatherForecastService {
 	}
 	
 	private static func getWeatherIcon(weatherDetail: WeatherDetail) -> String {
-		return "sun.max.fill"
+		
+		return switch weatherDetail.main{
+			case("Clouds"): WeatherIcon.cloudSun.rawValue
+			case("Rain"): WeatherIcon.cloudRain.rawValue
+			case("Snow"): WeatherIcon.snowflake.rawValue
+			default: WeatherIcon.sunMax.rawValue
+		}
 	}
 	
 	private static func throwException(statusCode: Int?) -> OpenWeatherErrors {

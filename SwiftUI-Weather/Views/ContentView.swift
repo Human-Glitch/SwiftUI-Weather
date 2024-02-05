@@ -16,7 +16,7 @@ struct ContentView: View {
 			WeatherForecastBackgroundView(isNight: $isNight)
 			
 			VStack{
-				CityTextView(cityName: "Cupertino, CA")
+				CityTextView(cityName: "Little Rock, AR")
 				
 				if($forecastByApi.count != 0)
 				{
@@ -28,18 +28,6 @@ struct ContentView: View {
 						}
 					}
 				}
-
-				Spacer()
-				
-				Button(action: {
-					isNight.toggle()
-				}, label: {
-					WeatherButton(title: "Change Day Time",
-								 backgroundColor: .white,
-								 foregroundColor: .blue)
-				})
-				
-				Spacer()
 			}
 		}.task{
 			if($forecastByApi.count != 0){ return }

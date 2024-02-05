@@ -303,7 +303,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "EAFAA9BA-D164-4E7A-BFB3-351ACF56898B"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
@@ -313,6 +313,54 @@
             endingLineNumber = "48"
             landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D2AFBEC-93DA-4D81-AA14-81E7F68B374B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "getWeatherIcon(weatherDetail:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D2AFBEC-93DA-4D81-AA14-81E7F68B374B - 427eee6675d83b3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUI_Weather.WeatherForecastService.getWeatherIcon(weatherDetail: SwiftUI_Weather.WeatherDetail) -&gt; Swift.String"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "0D2AFBEC-93DA-4D81-AA14-81E7F68B374B - 427eee6675d83b3e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static SwiftUI_Weather.WeatherForecastService.getWeatherIcon(weatherDetail: SwiftUI_Weather.WeatherDetail) -&gt; Swift.String"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
