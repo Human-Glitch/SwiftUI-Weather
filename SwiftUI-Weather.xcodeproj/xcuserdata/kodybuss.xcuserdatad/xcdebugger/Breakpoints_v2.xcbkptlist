@@ -7,63 +7,152 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "19A19491-0F0B-4B32-AF49-AFC52C7D9FAE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftUI-Weather/Models/OpenWeatherResponse.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "991906E8-55CF-41D2-A76C-9BB8DB44021E"
+            uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "991906E8-55CF-41D2-A76C-9BB8DB44021E - 4c45507d79767312"
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6029614b7cd589a0"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  symbolName = "(1) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
                   moduleName = "SwiftUI-Weather"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "548">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "672">
                </Location>
                <Location
-                  uuid = "991906E8-55CF-41D2-A76C-9BB8DB44021E - 4c45507d79767312"
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - ffd24284dafc7f97"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  symbolName = "(2) await resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
                   moduleName = "SwiftUI-Weather"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "544">
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6b4d54b0bb0f4d9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6e1f3d4d1463a39f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6029614b7cd58941"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "672">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - ffd24284dafc7f76"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6b4d54b0bb0f4d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6e1f3d4d1463a37e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "653504CA-C628-4AD5-A729-000A76DD3AD0 - 6b4d54b0bb0f4d7f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "292">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -71,15 +160,141 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C78939B9-67C1-41AC-B5F9-E98206B4E95B"
-            shouldBeEnabled = "Yes"
+            uuid = "0AB49719-2CBE-4637-A0FF-91710F83B1B2"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0AB49719-2CBE-4637-A0FF-91710F83B1B2 - 6b4d54b0bb0f5259"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "4196">
+               </Location>
+               <Location
+                  uuid = "0AB49719-2CBE-4637-A0FF-91710F83B1B2 - 6b4d54b0bb0f523a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "2984">
+               </Location>
+               <Location
+                  uuid = "0AB49719-2CBE-4637-A0FF-91710F83B1B2 - 6b4d54b0bb0f523a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "2844">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B970B4A9-C9DF-4523-A195-A68796D212A0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B970B4A9-C9DF-4523-A195-A68796D212A0 - 6b4d54b0bb0f4dbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "380">
+               </Location>
+               <Location
+                  uuid = "B970B4A9-C9DF-4523-A195-A68796D212A0 - 6b4d54b0bb0f4dbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "604">
+               </Location>
+               <Location
+                  uuid = "B970B4A9-C9DF-4523-A195-A68796D212A0 - 6b4d54b0bb0f4dbd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static SwiftUI_Weather.WeatherForecastService.getWeatherForecastAsync(latitude: Swift.Double, longitude: Swift.Double) async throws -&gt; Swift.Array&lt;SwiftUI_Weather.Weather&gt;"
+                  moduleName = "SwiftUI-Weather"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kodybuss/Repos/SwiftUI-Weather/SwiftUI-Weather/Services/WeatherForecastService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0B8565D2-76D6-4485-8E36-BD1F0F9694E8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -87,7 +302,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "89AC1F83-7099-4144-8897-B3A75012845D"
+            uuid = "EAFAA9BA-D164-4E7A-BFB3-351ACF56898B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -96,22 +311,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "26ADC5B6-3249-4307-806B-8B7FAC39D441"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SwiftUI-Weather/Services/WeatherForecastService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
             landmarkName = "getWeatherForecastAsync(latitude:longitude:)"
             landmarkType = "7">
          </BreakpointContent>
