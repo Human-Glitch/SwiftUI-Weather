@@ -32,59 +32,59 @@ struct WeatherDayView: View {
 #Preview {
 	Group{
 		HStack{
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "sun.max.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "sun.max.fill", temperature: 75))
 				.background(.blue)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.sun.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.sun.fill", temperature: 75))
 				.background(.blue)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.bolt.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.bolt.fill", temperature: 75))
 				.background(.blue)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.rain.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.rain.fill", temperature: 75))
 				.background(.blue)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.hail.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.hail.fill", temperature: 75))
 				.background(.blue)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.snow.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.snow.fill", temperature: 75))
 				.background(.blue)
 		}
 		
 		HStack{
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "wind", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "wind", temperature: 75))
 				.background(.orange)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "snowflake", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "snowflake", temperature: 75))
 				.background(.orange)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "tornado", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "tornado", temperature: 75))
 				.background(.orange)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "tropicalstorm", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "tropicalstorm", temperature: 75))
 				.background(.orange)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "hurricane", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "hurricane", temperature: 75))
 				.background(.orange)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "rainbow", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "rainbow", temperature: 75))
 				.background(.orange)
 		}
 		
 		HStack{
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "moon.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "moon.fill", temperature: 75))
 				.background(.black)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "moon.stars.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "moon.stars.fill", temperature: 75))
 				.background(.black)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.moon.rain.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.moon.rain.fill", temperature: 75))
 				.background(.black)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.moon.rain.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.moon.rain.fill", temperature: 75))
 				.background(.black)
 			
-			WeatherDayView(weather: Weather(weekDay: "MON", weatherIcon: "cloud.moon.bolt.fill", temperature: 75))
+			WeatherDayView(weather: Weather(date: Date(), weekDay: "MON", weatherIcon: "cloud.moon.bolt.fill", temperature: 75))
 				.background(.black)
 		}
 	}

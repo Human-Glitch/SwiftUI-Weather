@@ -49,6 +49,7 @@ class WeatherForecastService {
 		
 		forecast.append(
 			Weather(
+				date: currentDate,
 				weekDay: "\(currentWeekDay)",
 				weatherIcon: getWeatherIcon(weatherDetail: currentWeather.weather.first!),
 				temperature: Int(currentWeather.temp)
@@ -61,6 +62,7 @@ class WeatherForecastService {
 			
 			forecast.append(
 				Weather(
+					date: date,
 					weekDay: "\(weekDay)",
 					weatherIcon: getWeatherIcon(weatherDetail: dailyWeather.weather.first!),
 					temperature: Int(dailyWeather.temp.day)

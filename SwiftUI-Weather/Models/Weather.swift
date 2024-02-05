@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Weather : Hashable {
+	var date: Date
 	var weekDay: String
 	var weatherIcon: String
 	var temperature: Int

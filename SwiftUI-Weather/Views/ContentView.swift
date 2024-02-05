@@ -32,8 +32,10 @@ struct ContentView: View {
 		}.task{
 			if($forecastByApi.count != 0){ return }
 			do{
-				
 				forecastByApi = try await WeatherForecastService.getWeatherForecastAsync(latitude: 33.44, longitude: -94.04)
+				
+				isNight = Calendar.current.component(.hour, from: forecastByApi.first!.date) >= 18
+				
 			}
 			catch OpenWeatherErrors.notFound {
 				print("Not Found")
