@@ -9,32 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
 	@State private var isNight = false
-	
-	private var forecast =
-	[
-		Weather(weekDay: WeekDay.mon.rawValue,
-			   weatherIcon: WeatherIcon.sunMax.rawValue,
-			   temperature: 74),
-		Weather(weekDay: WeekDay.tue.rawValue,
-			   weatherIcon: WeatherIcon.cloudSun.rawValue,
-			   temperature: 74),
-		Weather(weekDay: WeekDay.wed.rawValue,
-			   weatherIcon: WeatherIcon.wind.rawValue,
-			   temperature: 74),
-		Weather(weekDay: WeekDay.thu.rawValue,
-			   weatherIcon: WeatherIcon.cloudBolt.rawValue,
-			   temperature: 74),
-		Weather(weekDay: WeekDay.fri.rawValue,
-			   weatherIcon: WeatherIcon.cloudRain.rawValue,
-		       temperature: 74),
-		Weather(weekDay: WeekDay.sat.rawValue,
-			   weatherIcon: WeatherIcon.cloudSnow.rawValue,
-			   temperature: 74),
-		Weather(weekDay: WeekDay.sun.rawValue,
-			   weatherIcon: WeatherIcon.snowflake.rawValue,
-			   temperature: 74)
-	]
-	
 	@State private var forecastByApi: [Weather] = []
 	
     var body: some View {
@@ -44,14 +18,17 @@ struct ContentView: View {
 			VStack{
 				CityTextView(cityName: "Cupertino, CA")
 				
-				TodayWeatherView(isNight: $isNight, weather: forecast[0])
-				
-				HStack(spacing: 10){
-					ForEach(forecast[1...], id: \.self){ weather in
-						WeatherDayView(weather: weather)
+				if($forecastByApi.count != 0)
+				{
+					TodayWeatherView(isNight: $isNight, weather: $forecastByApi[0].wrappedValue)
+					
+					HStack(spacing: 10){
+						ForEach($forecastByApi.wrappedValue[1...6], id: \.self){ weather in
+							WeatherDayView(weather: weather)
+						}
 					}
 				}
-				
+
 				Spacer()
 				
 				Button(action: {
@@ -64,13 +41,26 @@ struct ContentView: View {
 				
 				Spacer()
 			}
+		}.task{
+			if($forecastByApi.count != 0){ return }
+			do{
+				
+				forecastByApi = try await WeatherForecastService.getWeatherForecastAsync(latitude: 33.44, longitude: -94.04)
+			}
+			catch OpenWeatherErrors.notFound {
+				print("Not Found")
+			}
+			catch OpenWeatherErrors.badRequest{
+				print("Bad Request")
+			}
+			catch OpenWeatherErrors.internalServerError{
+				print("Internal Server Error")
+			}
+			catch {
+				print("UknownError")
+			}
 		}
-//		.onAppear{
-//		   if(forecastByApi.count == 0){
-//			   forecastByApi = WeatherForecastService.getWeatherForecastAsync(latitude: 33.44, longitude: -94.04)
-//		   }
-//	   }
-    }
+	}
 }
 
 #Preview {
