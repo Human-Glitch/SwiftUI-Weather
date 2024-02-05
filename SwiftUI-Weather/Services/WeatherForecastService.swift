@@ -7,49 +7,66 @@
 
 import Foundation
 
-//c&lon=-94.04
 class WeatherForecastService {
 	private static let baseUrl: String = "https://api.openweathermap.org/data/3.0/onecall"
 	
-	private static var forecast: [Weather] = []
-	
-	public static func getWeatherForecastAsync(latitude: Double, longitude: Double) -> [Weather] {
-		forecast.removeAll()
+	public static func getWeatherForecastAsync(latitude: Double, longitude: Double) async throws -> [Weather] {
 		
-		guard let url: URL = .init(string: "\(baseUrl)?lat=\(latitude)&lon=\(longitude)&exclude=minutely,hourly,alerts&appid=478ee3eaaa49afeee325cafcc62200d9&units=imperial")
+		// Define Url
+		guard let url: URL = URL(string: "\(baseUrl)?lat=\(latitude)&lon=\(longitude)&exclude=minutely,hourly,alerts&appid=478ee3eaaa49afeee325cafcc62200d9&units=imperial")
 		else{
-			print("Failed to create a url with provided information.")
-			return []
+			throw OpenWeatherErrors.invalidUrl
 		}
 		
-		let task = URLSession.shared.dataTask(with: url) { data, response, error in
-			if let data = data, let content = String(data: data, encoding: .utf8) {
-				let decoder = JSONDecoder()
-				do{
-					let openWeatherResponse = try decoder.decode(OpenWeatherResponse.self, from: data)
-					
-					forecast.append(
-						Weather(weekDay: "\(openWeatherResponse.current.dt)",
-							   weatherIcon: getWeatherIcon(weatherDetail: openWeatherResponse.current.weather.first!),
-							   temperature: Int(openWeatherResponse.current.temp)))
-					
-					for dailyWeather in openWeatherResponse.daily{
-						forecast.append(
-							Weather(weekDay: "\(dailyWeather.dt)",
-								   weatherIcon: getWeatherIcon(weatherDetail: dailyWeather.weather.first!),
-								   temperature: Int(dailyWeather.temp.day)))
-					}
-					
-				}catch{
-					print("Error decoding: \(error)")
-				}
-			}else if let error = error {
-				// Handle networking error here
-				print("Networking error: \(error)")
-			}
+		// Make call
+		let (data, response) = try await URLSession.shared.data(from: url)
+		
+		//let content = String(data: data, encoding: .utf8)
+		
+		guard let response = response as? HTTPURLResponse, response.statusCode == 200
+		else{
+			let httpResponse = response as? HTTPURLResponse
+			throw throwException(statusCode: httpResponse?.statusCode)
 		}
 		
-		task.resume()
+		// Deserialize
+		let decoder = JSONDecoder()
+		decoder.keyDecodingStrategy = .convertFromSnakeCase
+		
+		guard let openWeatherResponse = try? decoder.decode(OpenWeatherResponse.self, from: data)
+		else{
+			throw OpenWeatherErrors.deserializationFailed
+		}
+		
+		// Map response
+		var forecast : [Weather] = []
+		
+		let timezoneEpoch = openWeatherResponse.timezoneOffset
+		
+		let currentWeather = openWeatherResponse.current
+		let currentDate = OpenWeatherUtilities.getDate(dateTimeEpoch: currentWeather.dt, timeZoneEpoch: timezoneEpoch)
+		let currentWeekDay = OpenWeatherUtilities.getDayOfWeek(date: currentDate)
+		
+		forecast.append(
+			Weather(
+				weekDay: "\(currentWeekDay)",
+				weatherIcon: getWeatherIcon(weatherDetail: currentWeather.weather.first!),
+				temperature: Int(currentWeather.temp)
+			)
+		)
+		
+		for dailyWeather in openWeatherResponse.daily[1...]{
+			let date = OpenWeatherUtilities.getDate(dateTimeEpoch: dailyWeather.dt, timeZoneEpoch: timezoneEpoch)
+			let weekDay = OpenWeatherUtilities.getDayOfWeek(date: date)
+			
+			forecast.append(
+				Weather(
+					weekDay: "\(weekDay)",
+					weatherIcon: getWeatherIcon(weatherDetail: dailyWeather.weather.first!),
+					temperature: Int(dailyWeather.temp.day)
+				)
+			)
+		}
 		
 		return forecast
 	}
@@ -58,6 +75,16 @@ class WeatherForecastService {
 		return "sun.max.fill"
 	}
 	
-	
-	
+	private static func throwException(statusCode: Int?) -> OpenWeatherErrors {
+		switch statusCode {
+			case 400:
+				return OpenWeatherErrors.badRequest
+			case 404:
+				return OpenWeatherErrors.notFound
+			case 500:
+				return OpenWeatherErrors.internalServerError
+			default:
+				return OpenWeatherErrors.otherFailure
+		}
+	}
 }

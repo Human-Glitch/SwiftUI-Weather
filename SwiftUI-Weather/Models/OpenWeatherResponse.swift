@@ -7,36 +7,34 @@
 
 import Foundation
 
-struct OpenWeatherResponse: Codable{
+struct OpenWeatherResponse: Decodable{
+	let timezoneOffset: Int
 	let current: CurrentWeather
 	let daily: [DailyWeather]
 }
 
-struct CurrentWeather: Codable{
+struct CurrentWeather: Decodable{
 	let dt: Int
 	let temp: Double
 	let weather: [WeatherDetail]
 }
 
-struct DailyWeather: Codable{
+struct DailyWeather: Decodable{
 	let dt: Int
 	let temp: Temperature
 	let weather: [WeatherDetail]
 }
 
-struct Temperature: Codable{
+struct Temperature: Decodable{
 	let day: Double
 }
 
-struct WeatherDetail: Codable{
+struct WeatherDetail: Decodable{
 	let main: String
 	let description: String
 }
 
-
-
-
-
+// Sample payload
 //{
 //"lat":33.44,
 //"lon":-94.04,
