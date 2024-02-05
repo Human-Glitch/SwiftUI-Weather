@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E72ACD972B7088B500B8DCC7 /* OpenWeatherErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72ACD962B7088B500B8DCC7 /* OpenWeatherErrors.swift */; };
+		E72ACD9A2B70907100B8DCC7 /* OpenWeatherUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72ACD992B70907100B8DCC7 /* OpenWeatherUtilities.swift */; };
 		E76876142B671AF300086F92 /* SwiftUI_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76876132B671AF300086F92 /* SwiftUI_WeatherApp.swift */; };
 		E76876162B671AF300086F92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76876152B671AF300086F92 /* ContentView.swift */; };
 		E76876182B671AF400086F92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E76876172B671AF400086F92 /* Assets.xcassets */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E72ACD962B7088B500B8DCC7 /* OpenWeatherErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherErrors.swift; sourceTree = "<group>"; };
+		E72ACD992B70907100B8DCC7 /* OpenWeatherUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherUtilities.swift; sourceTree = "<group>"; };
 		E76876102B671AF300086F92 /* SwiftUI-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E76876132B671AF300086F92 /* SwiftUI_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeatherApp.swift; sourceTree = "<group>"; };
 		E76876152B671AF300086F92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E72ACD982B70905500B8DCC7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E72ACD992B70907100B8DCC7 /* OpenWeatherUtilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		E76876072B671AF300086F92 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +84,7 @@
 		E76876122B671AF300086F92 /* SwiftUI-Weather */ = {
 			isa = PBXGroup;
 			children = (
+				E72ACD982B70905500B8DCC7 /* Utilities */,
 				E768763A2B6767C000086F92 /* Services */,
 				E76876352B6757CB00086F92 /* Constants */,
 				E768762F2B67566000086F92 /* Models */,
@@ -127,6 +140,7 @@
 			children = (
 				E76876362B6757EA00086F92 /* WeekDay.swift */,
 				E76876382B67597700086F92 /* WeatherIcon.swift */,
+				E72ACD962B7088B500B8DCC7 /* OpenWeatherErrors.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -211,6 +225,7 @@
 			files = (
 				E76876372B6757EA00086F92 /* WeekDay.swift in Sources */,
 				E76876342B67571300086F92 /* Weather.swift in Sources */,
+				E72ACD972B7088B500B8DCC7 /* OpenWeatherErrors.swift in Sources */,
 				E76876272B674E9500086F92 /* WeatherDayView.swift in Sources */,
 				E76876162B671AF300086F92 /* ContentView.swift in Sources */,
 				E768762D2B67547200086F92 /* TodayWeatherView.swift in Sources */,
@@ -219,6 +234,7 @@
 				E76876392B67597700086F92 /* WeatherIcon.swift in Sources */,
 				E768762B2B67544300086F92 /* CityTextView.swift in Sources */,
 				E76876142B671AF300086F92 /* SwiftUI_WeatherApp.swift in Sources */,
+				E72ACD9A2B70907100B8DCC7 /* OpenWeatherUtilities.swift in Sources */,
 				E76876292B674FA800086F92 /* WeatherForecastBackgroundView.swift in Sources */,
 				E76876232B67376B00086F92 /* WeatherButton.swift in Sources */,
 			);
