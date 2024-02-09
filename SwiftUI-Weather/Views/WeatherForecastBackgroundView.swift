@@ -14,8 +14,8 @@ struct WeatherForecastBackgroundView: View {
 		LinearGradient(
 			gradient: Gradient(
 				colors: [
-					isNight ? .black: .blue,
-					isNight ? .gray : Color("lightBlue")
+					isNight ? .black: Color("lightBlue"),
+					isNight ? .gray : .blue
 				]),
 		    startPoint: .topLeading,
 		    endPoint: .bottomTrailing)

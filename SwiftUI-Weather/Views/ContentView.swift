@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
 	@Binding var location: Location
 	@State private var isNight = false
-	@State private var forecastByApi: [Weather] = []
+	@State private var forecasts: [Weather] = []
 	
     var body: some View {
 		ZStack {
@@ -19,23 +19,23 @@ struct ContentView: View {
 			VStack{
 				CityTextView(cityName: $location.Name.wrappedValue)
 				
-				if($forecastByApi.count != 0)
+				if($forecasts.count != 0)
 				{
-					TodayWeatherView(isNight: $isNight, weather: $forecastByApi[0].wrappedValue)
+					TodayWeatherView(isNight: $isNight, weather: $forecasts[0].wrappedValue)
 					
 					HStack(spacing: 10){
-						ForEach($forecastByApi.wrappedValue[1...6], id: \.self){ weather in
+						ForEach($forecasts.wrappedValue[1...6], id: \.self){ weather in
 							WeatherDayView(weather: weather)
 						}
 					}
 				}
 			}
 		}.task{
-			if($forecastByApi.count != 0){ return }
+			if($forecasts.count != 0){ return }
 			do{
-				forecastByApi = try await WeatherForecastService.getWeatherForecastAsync(latitude: $location.Latitude.wrappedValue, longitude: $location.Longitude.wrappedValue)
+				forecasts = try await WeatherForecastService.getWeatherForecastAsync(latitude: $location.Latitude.wrappedValue, longitude: $location.Longitude.wrappedValue)
 				
-				isNight = Calendar.current.component(.hour, from: forecastByApi.first!.date) >= 18
+				isNight = Calendar.current.component(.hour, from: forecasts.first!.date) >= 18
 				
 			}
 			catch OpenWeatherErrors.notFound {
