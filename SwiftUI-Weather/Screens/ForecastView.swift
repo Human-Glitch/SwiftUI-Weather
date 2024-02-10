@@ -46,8 +46,9 @@ struct ForecastView: View {
 		do{
 			forecasts = try await WeatherForecastService.getWeatherForecastAsync(latitude: $location.Latitude.wrappedValue, longitude: $location.Longitude.wrappedValue)
 			
-			isNight = Calendar.current.component(.hour, from: forecasts.first!.date) >= 18
+			let hour = Calendar.current.component(.hour, from: forecasts.first!.date)
 			
+			isNight = hour < 6 || hour >= 8
 			return forecasts
 		}
 		catch ServiceErrors.notFound{
