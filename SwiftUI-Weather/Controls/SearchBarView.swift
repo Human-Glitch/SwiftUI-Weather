@@ -12,28 +12,23 @@ struct SearchBarView: View {
 	@Binding var foundLocation: Location
 	@Binding var locationText: String
 	
-	let possibleLocations: [Location] = [
-		Location(name: "Tulsa, OK", latitude: 36.1, longitude: -96.0),
-		Location(name: "Little Rock, AR", latitude: 34.7, longitude: -92.6),
-		Location(name: "Cupertino, CA", latitude: 37.32, longitude: -122.03)
-	]
-	
 	var body: some View {
 		HStack{
 			Image(systemName: "magnifyingglass")
 				.foregroundColor(.gray)
 				.padding(.leading, 10)
 			
-			TextField("Search for a city", text: $locationText, onCommit: {
-
+			TextField("Search a zip code", text: $locationText,
+					  onCommit: {
 				isPresented = false
 				
-				foundLocation = possibleLocations.first(where: { location in
-					location.Name.uppercased().contains(locationText.uppercased())
-				}) ?? Location()
+				if($locationText.wrappedValue.isEmpty){
+					return
+				}
 				
-				if(foundLocation.Name != "")
-				{
+				Task{
+					foundLocation = await getLocationAsync(locationText: $locationText.wrappedValue);
+					
 					isPresented = true
 					locationText = ""
 				}
@@ -43,6 +38,27 @@ struct SearchBarView: View {
 		}
 		.background(Color.white) // Set the background color here
 		.cornerRadius(8)
+	}
+	
+	private func getLocationAsync(locationText: String) async -> Location{
+		do{
+			foundLocation = try await LocationService.GetLocationAsync(zip: locationText)
+			return foundLocation
+		}
+		catch ServiceErrors.notFound {
+			print("Not Found")
+		}
+		catch ServiceErrors.badRequest{
+			print("Bad Request")
+		}
+		catch ServiceErrors.internalServerError{
+			print("Internal Server Error")
+		}
+		catch {
+			print("UknownError")
+		}
+		
+		return Location()
 	}
 }
 
