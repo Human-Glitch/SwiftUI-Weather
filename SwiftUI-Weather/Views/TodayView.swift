@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TodayWeatherView: View {
+struct TodayView: View {
 	@Binding var isNight: Bool
 	var weather : Weather
 	
@@ -34,10 +34,10 @@ struct TodayWeatherView: View {
 #Preview {
 	Group{
 		HStack{
-			TodayWeatherView(isNight: .constant(false), weather: Weather(date: Date(), weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.cloudSun.rawValue, temperature: 75))
+			TodayView(isNight: .constant(false), weather: Weather(date: Date(), weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.cloudSun.rawValue, temperature: 75))
 				.background(.black)
 			
-			TodayWeatherView(isNight: .constant(true), weather: Weather(date: Date(), weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.cloudMoon.rawValue, temperature: 75))
+			TodayView(isNight: .constant(true), weather: Weather(date: Date(), weekDay: WeekDay.mon.rawValue, weatherIcon: WeatherIcon.cloudMoon.rawValue, temperature: 75))
 				.background(.black)
 		}
 	}

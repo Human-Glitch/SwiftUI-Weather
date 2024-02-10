@@ -19,6 +19,6 @@ struct CityTextView: View {
 }
 
 #Preview {
-	CityTextView(cityName: "Tulsa, OK")
+	CityTextView(cityName: "Tulsa, OK US")
 		.background(.black)
 }

@@ -29,7 +29,7 @@ struct SearchView: View {
 				}
 				.frame(alignment: .leading)
 				.navigationDestination(isPresented: .constant($isPresented.wrappedValue), destination: {
-					ContentView(location: .constant(foundLocation))
+					ForecastView(location: .constant(foundLocation))
 				})
 			}
 		}
