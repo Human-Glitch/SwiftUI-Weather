@@ -15,7 +15,7 @@ class WeatherForecastService {
 		// Define Url
 		guard let url: URL = URL(string: "\(baseUrl)?lat=\(latitude)&lon=\(longitude)&exclude=minutely,hourly,alerts&appid=478ee3eaaa49afeee325cafcc62200d9&units=imperial")
 		else{
-			throw OpenWeatherErrors.invalidUrl
+			throw ServiceErrors.invalidUrl
 		}
 		
 		// Make call
@@ -26,7 +26,7 @@ class WeatherForecastService {
 		guard let response = response as? HTTPURLResponse, response.statusCode == 200
 		else{
 			let httpResponse = response as? HTTPURLResponse
-			throw throwException(statusCode: httpResponse?.statusCode)
+			throw ServiceErrorUtilities.ThrowException(statusCode: httpResponse?.statusCode)
 		}
 		
 		// Deserialize
@@ -35,7 +35,7 @@ class WeatherForecastService {
 		
 		guard let openWeatherResponse = try? decoder.decode(OpenWeatherResponse.self, from: data)
 		else{
-			throw OpenWeatherErrors.deserializationFailed
+			throw ServiceErrors.deserializationFailed
 		}
 		
 		// Map response
@@ -80,19 +80,6 @@ class WeatherForecastService {
 			case("Rain"): WeatherIcon.cloudRain.rawValue
 			case("Snow"): WeatherIcon.snowflake.rawValue
 			default: WeatherIcon.sunMax.rawValue
-		}
-	}
-	
-	private static func throwException(statusCode: Int?) -> OpenWeatherErrors {
-		switch statusCode {
-			case 400:
-				return OpenWeatherErrors.badRequest
-			case 404:
-				return OpenWeatherErrors.notFound
-			case 500:
-				return OpenWeatherErrors.internalServerError
-			default:
-				return OpenWeatherErrors.otherFailure
 		}
 	}
 }
